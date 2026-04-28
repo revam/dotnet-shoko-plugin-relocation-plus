@@ -5,7 +5,29 @@
   "authors": "revam",
   "repository_url": "https://github.com/revam/dotnet-shoko-plugin-relocation-plus",
   "homepage_url": null,
-  "tags": ["hosted-service", "relocation", "video-extras", "filesystem"],
+  "tags": [
+    "hosted-service",
+    "relocation",
+    "video-extras",
+    "filesystem"
+  ],
   "thumbnail": null,
-  "releases": []
+  "releases": [
+    {
+      "version": "1.0.0",
+      "tag": "v1.0.0",
+      "source_revision": "6dc0088683cd3c45425639c0f4044044773a7fde",
+      "released_at": "2026-04-28T18:02:35Z",
+      "channel": "Stable",
+      "release_notes": null,
+      "archives": [
+        {
+          "runtime": "any",
+          "abstraction": "6.0.0",
+          "url": "https://github.com/revam/dotnet-shoko-plugin-relocation-plus/releases/download/v1.0.0/Shoko.Plugin.RelocationPlus-v1.0.0-any.zip",
+          "checksum": "238d863853f43b61c1ad2fc25da9a0cb005c1a3e6dc2d6aa3d6b66c5f636821f"
+        }
+      ]
+    }
+  ]
 }
