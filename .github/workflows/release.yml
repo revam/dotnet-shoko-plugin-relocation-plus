@@ -19,7 +19,7 @@ jobs:
           dotnet-version: 10.0.x
 
       - name: Build
-        run: dotnet build Shoko.Plugin.RelocationPlus.sln --configuration Release
+        run: dotnet build Shoko.Plugin.RelocationPlus.slnx --configuration Release
 
       - name: Package
         run: |

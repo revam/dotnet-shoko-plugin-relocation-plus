@@ -5,7 +5,7 @@
   "authors": "revam",
   "repository_url": "https://github.com/revam/dotnet-shoko-plugin-relocation-plus",
   "homepage_url": null,
-  "tags": ["relocation", "extras", "filesystem"],
+  "tags": ["hosted-service", "relocation", "video-extras", "filesystem"],
   "thumbnail": null,
   "releases": []
 }
