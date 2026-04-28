@@ -1,0 +1,28 @@
+using System;
+using Microsoft.Extensions.DependencyInjection;
+using Shoko.Abstractions.Plugin;
+
+namespace Shoko.Plugin.RelocationPlus;
+
+/// <summary>
+/// Responsible for relocating video extra files near the video files.
+/// </summary>
+public class Plugin : IPlugin, IPluginServiceRegistration
+{
+    /// <inheritdoc/>
+    public Guid ID { get; private init; } = new("f7e9b467-ef01-5aa6-92ba-3a6079f15bf6");
+
+    /// <inheritdoc/>
+    public string Name { get; private set; } = "Relocation+";
+
+    /// <inheritdoc/>
+    public string Description { get; private set; } = """
+        Responsible for relocating video extra files near the video files.
+    """;
+
+    /// <inheritdoc/>
+    public static void RegisterServices(IServiceCollection serviceCollection, IApplicationPaths applicationPaths)
+    {
+        serviceCollection.AddHostedService<RelocationPlusService>();
+    }
+}
