@@ -16,7 +16,7 @@ A [Shoko](https://shokoanime.com/) plugin that relocates video extra files near 
    ```
    https://raw.githubusercontent.com/revam/dotnet-shoko-plugin-relocation-plus/stable/manifest.json
    ```
-3. Go to **Server → Plugins → Browse** and find **Relocation+**.
+3. Go to **Settings → Plugins → Browse** and find **Relocation+**.
 4. Click **Install** on the desired version.
 5. Restart Shoko.
 
