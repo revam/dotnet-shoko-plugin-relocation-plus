@@ -1,16 +1,33 @@
 {
   "id": "f7e9b467-ef01-5aa6-92ba-3a6079f15bf6",
-  "name": "Relocation+",
+  "name": "Relocation\u002B",
   "overview": "Responsible for relocating video extra files near the video files.",
   "authors": "revam",
   "repository_url": "https://github.com/revam/dotnet-shoko-plugin-relocation-plus",
   "tags": [
+    "service-registration",
     "hosted-service",
     "relocation",
     "video-extras",
     "filesystem"
   ],
   "releases": [
+    {
+      "version": "1.0.1",
+      "tag": "v1.0.1",
+      "released_at": "2026-09-18T04:41:43.5682469Z",
+      "channel": "Stable",
+      "release_notes": "Rebuilt against the current abstractions, and moved release packaging onto \u0060shoko-build\u0060 with the published manifest on the \u0060metadata\u0060 branch.\n\nRequires Shoko Server with abstractions \u00606.0.0-alpha.89\u0060.",
+      "dependencies": [],
+      "archives": [
+        {
+          "runtime": "any",
+          "abstraction": "6.0.0",
+          "url": "https://github.com/revam/dotnet-shoko-plugin-relocation-plus/releases/download/v1.0.1/Relocation\u002B-v1.0.1-any.zip",
+          "checksum": "sha256:0a6e79c1791a66d46d65c802bc73ba5f2252198aed0e46318b5572716b7bdabb"
+        }
+      ]
+    },
     {
       "version": "1.0.0",
       "tag": "v1.0.0",
