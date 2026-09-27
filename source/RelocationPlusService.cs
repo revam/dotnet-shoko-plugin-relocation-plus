@@ -54,7 +54,7 @@ public class RelocationPlusService : IHostedService
     private void OnVideoRelocated(object? sender, VideoFileRelocatedEventArgs eventArgs)
     {
         var file = eventArgs.PreviousPath;
-        var newPath = eventArgs.File.Path;
+        var newPath = eventArgs.Path;
         if (string.IsNullOrEmpty(file) || string.IsNullOrEmpty(newPath))
             return;
 
@@ -63,7 +63,7 @@ public class RelocationPlusService : IHostedService
             return;
 
         var newDirectory = Path.GetDirectoryName(newPath);
-        _logger.LogInformation("Relocating {Count} extra files for file {Path}", extraFiles.Count, eventArgs.File.Path);
+        _logger.LogInformation("Relocating {Count} extra files for file {Path}", extraFiles.Count, newPath);
         foreach (var (extraAbsolutePath, extraRelativePath, extraFileName, isDirectory) in extraFiles)
         {
             var extraNewAbsolutePath = string.IsNullOrEmpty(extraRelativePath)
@@ -97,13 +97,13 @@ public class RelocationPlusService : IHostedService
 
     private void OnVideoDeleted(object? sender, VideoFileEventArgs eventArgs)
     {
-        var file = Path.Join(eventArgs.ManagedFolder.Path, eventArgs.RelativePath);
+        var file = eventArgs.Path;
         if (string.IsNullOrEmpty(file))
             return;
 
         if (eventArgs.File.IsAvailable)
         {
-            _logger.LogInformation("File {Path} is still available, skipping.", eventArgs.File.Path);
+            _logger.LogInformation("File {Path} is still available, skipping.", file);
             return;
         }
 
@@ -111,7 +111,7 @@ public class RelocationPlusService : IHostedService
         if (extraFiles.Count == 0)
             return;
 
-        _logger.LogInformation("Deleting {Count} extra files for file {Path}", extraFiles.Count, eventArgs.File.Path);
+        _logger.LogInformation("Deleting {Count} extra files for file {Path}", extraFiles.Count, file);
         foreach (var (absolutePath, _, _, isDirectory) in extraFiles)
         {
             try
