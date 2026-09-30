@@ -13,6 +13,22 @@
   ],
   "releases": [
     {
+      "version": "1.0.2",
+      "tag": "v1.0.2",
+      "released_at": "2026-09-30T16:38:16.7328084Z",
+      "channel": "Stable",
+      "release_notes": "Rebuilt against the abstractions \u00606.0.0-alpha.95\u0060 release. Extra files are moved or deleted along with their video as before.\n\nRequires Shoko Server with abstractions \u00606.0.0-alpha.95\u0060.",
+      "dependencies": [],
+      "archives": [
+        {
+          "runtime": "any",
+          "abstraction": "6.0.0",
+          "url": "https://github.com/revam/dotnet-shoko-plugin-relocation-plus/releases/download/v1.0.2/Relocation\u002B-v1.0.2-any.zip",
+          "checksum": "sha256:f2acd5500b4b2c286b5903f9046b489375f9fc0a91a8b24a6d4f43bde15f8a91"
+        }
+      ]
+    },
+    {
       "version": "1.0.1",
       "tag": "v1.0.1",
       "released_at": "2026-09-18T04:41:43.5682469Z",
